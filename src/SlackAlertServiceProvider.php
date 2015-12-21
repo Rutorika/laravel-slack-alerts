@@ -19,9 +19,9 @@ class SlackAlertServiceProvider extends ServiceProvider
             __DIR__ . '/slack-alert.php' => config_path('slack-alert.php'),
         ]);
 
-        $enabledForEnviroments = config('slack-alert.enviroments');
+        $enabledForEnvironments = config('slack-alert.environments');
 
-        if (in_array($this->app->environment(), $enabledForEnviroments)) {
+        if (in_array($this->app->environment(), $enabledForEnvironments)) {
 
             $channel = config('slack-alert.channel');
             $token = config('slack-alert.token');

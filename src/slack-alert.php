@@ -2,7 +2,7 @@
 
 return [
     'level' => \Monolog\Logger::ERROR,
-    'enviroments' => ['production'],
+    'environments' => ['production'],
     'token' => env('SLACK_TOKEN', false),
     'channel' => env('SLACK_CHANNEL', '#general'),
     'app_name' => env('SLACK_NAME', 'Laravel Site'),
