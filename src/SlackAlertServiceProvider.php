@@ -45,6 +45,5 @@ class SlackAlertServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(__DIR__ . '/slack-alert.php', 'slack-alert');
-        parent::register();
     }
 }
