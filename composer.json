@@ -16,5 +16,10 @@
     },
     "require-dev": {
         "orchestra/testbench": "~3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rutorika\\LaravelSlackAlert\\": "src/"
+        }
     }
 }

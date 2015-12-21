@@ -8,6 +8,16 @@ Provides errors logging to the slack
 xu@calypso:~$ composer require rutorika/laravel-slack-alerts
 ```
 
+Add service provider to `config/app.php`
+
+```php
+'providers' => [
+    // other providers...
+
+    Rutorika\LaravelSlackAlert\SlackAlertServiceProvider::class,
+]
+```
+
 Publish config
 
 ```
@@ -21,14 +31,4 @@ SLACK_CHANNEL=#dev-alert
 SLACK_TOKEN=xxxx-xxxxxxxxxx-xxxxxxxxxx-xxxxxxxxxxx-xxxxxxxxxx
 SLACK_NAME="Site Name"
 SLACK_MENTION_TO=@username
-```
-
-Add service provider to `config/app.php`
-
-```php
-'providers' => [
-    // other providers...
-
-    Rutorika\LaravelSlackAlert\SlackAlertServiceProvider::class
-]
 ```
