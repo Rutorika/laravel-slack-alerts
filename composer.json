@@ -1,0 +1,11 @@
+{
+    "name": "rutorika/laravel-slack-alerts",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dmitry Groza",
+            "email": "boxfrommars@gmail.com"
+        }
+    ],
+    "require": {}
+}
