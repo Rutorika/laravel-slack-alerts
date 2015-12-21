@@ -1,4 +1,4 @@
-# Rutorika/Laravel Slack Alert Provider
+# Rutorika Laravel Slack Alert Provider
 
 Provides errors logging to the slack
 
