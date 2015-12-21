@@ -19,18 +19,21 @@ class SlackAlertServiceProvider extends ServiceProvider
             __DIR__ . '/slack-alert.php' => config_path('slack-alert.php'),
         ]);
 
-        if ($this->app->environment() === 'production') {
+        $enabledForEnviroments = config('slack-alert.enviroments');
 
-            /** @var Writer $logger */
-            $logger = $this->app['log'];
+        if (in_array($this->app->environment(), $enabledForEnviroments)) {
 
             $channel = config('slack-alert.channel');
             $token = config('slack-alert.token');
             $name = config('slack-alert.app_name');
             $mentionTo = config('slack-alert.mention_to');
+            $level = config('slack-alert.level');
 
             if ($token) {
-                $slackHandler = new MentionedSlackHandler($token, $channel, $name, true, null, Logger::ERROR);
+                /** @var Writer $logger */
+                $logger = $this->app['log'];
+
+                $slackHandler = new MentionedSlackHandler($token, $channel, $name, true, null, $level);
                 $slackHandler->setMentionTo($mentionTo);
                 $logger->getMonolog()->pushHandler($slackHandler);
             }
