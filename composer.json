@@ -5,7 +5,16 @@
         {
             "name": "Dmitry Groza",
             "email": "boxfrommars@gmail.com"
+        },
+        {
+            "name": "Rutorika",
+            "email": "hello@rutorika.sexy"
         }
     ],
-    "require": {}
+    "require": {
+        "laravel/framework": "~5.1"
+    },
+    "require-dev": {
+        "orchestra/testbench": "~3.0"
+    }
 }
