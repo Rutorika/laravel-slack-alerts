@@ -1,3 +1,5 @@
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Rutorika/laravel-slack-alerts/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Rutorika/laravel-slack-alerts/?branch=master)
+
 # Rutorika Laravel Slack Alert Provider
 
 Provides errors logging to the slack
