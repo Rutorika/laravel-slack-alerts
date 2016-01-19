@@ -13,7 +13,7 @@ build_settings:
 test:
   php_mess_detector:
     path: "src"
-    allowed_warnings: 1
+    allowed_warnings: -1
     rules:
 #      - "cleancode"
       - "controversial"
